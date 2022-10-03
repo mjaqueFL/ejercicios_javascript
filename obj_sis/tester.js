@@ -91,20 +91,20 @@ function test_crearMapa(){
 
 function test_crearMapa(){
 	let map = new Map()
-	map.put('a', 222)
-	map.put('b', 333)
-	map.put('c', 238)
-	map.put('d', 177)
+	map.set('a', 222)
+	map.set('b', 333)
+	map.set('c', 238)
+	map.set('d', 177)
 	let respuesta = window['buscarEnMapa'](mapa, 238)
 	if (respuesta != 'c') throw ('Tu función no funciona (y eso es malo)')
 }
 
 function test_sumarMapa(){
 	let map = new Map()
-	map.put(3, 2)
-	map.put(4, 33)
-	map.put(12, 8)
-	map.put(-1, 7)
+	map.set(3, 2)
+	map.set(4, 33)
+	map.set(12, 8)
+	map.set(-1, 7)
 	let respuesta = window['sumarMapa'](mapa)
 	if (respuesta != 68) throw ('Tu función no funciona (y eso es malo)')
 }
