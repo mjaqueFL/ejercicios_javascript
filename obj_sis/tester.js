@@ -79,3 +79,12 @@ function test_eliminarDeSetConFiltro(){
 	if (respuesta.size != 3) throw ('La longitud del set no coincide')
 	if (respuesta.has(22)) throw ("No has eliminado bien los elementos")
 }
+
+function test_crearMapa(){
+	let claves = ['a', 'b', 'c', 'd']
+	let valores = [10, 20, 30, 42]
+	let respuesta = window['crearMapa'](claves, valores)
+	if (!(respuesta instanceof Map)) throw ("No es el tipo correcto. Debes devolver un Map")
+	if (respuesta.size != 3) throw ('La longitud del set no coincide')
+	if (respuesta.get('b') != 20) throw ('Los valores no coinciden')
+}
