@@ -85,12 +85,12 @@ function test_crearMapa(){
 	let valores = [10, 20, 30, 42]
 	let respuesta = window['crearMapa'](claves, valores)
 	if (!(respuesta instanceof Map)) throw ("No es el tipo correcto. Debes devolver un Map")
-	if (respuesta.size != 3) throw ('La longitud del set no coincide')
+	if (respuesta.size != 4) throw ('La longitud del set no coincide')
 	if (respuesta.get('b') != 20) throw ('Los valores no coinciden')
 }
 
 function test_crearMapa(){
-	let mapa = new Map()
+	let map = new Map()
 	map.put('a', 222)
 	map.put('b', 333)
 	map.put('c', 238)
@@ -100,7 +100,7 @@ function test_crearMapa(){
 }
 
 function test_sumarMapa(){
-	let mapa = new Map()
+	let map = new Map()
 	map.put(3, 2)
 	map.put(4, 33)
 	map.put(12, 8)
