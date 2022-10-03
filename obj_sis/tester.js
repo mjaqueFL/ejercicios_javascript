@@ -96,7 +96,7 @@ function test_crearMapa(){
 	map.put('c', 238)
 	map.put('d', 177)
 	let respuesta = window['buscarEnMapa'](mapa, 238)
-	if (respuesta != 'b') throw ('Tu función no funciona (y eso es malo)')
+	if (respuesta != 'c') throw ('Tu función no funciona (y eso es malo)')
 }
 
 function test_sumarMapa(){
