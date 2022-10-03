@@ -89,7 +89,7 @@ function test_crearMapa(){
 	if (respuesta.get('b') != 20) throw ('Los valores no coinciden')
 }
 
-function test_crearMapa(){
+function test_buscarEnMapa(){
 	let map = new Map()
 	map.set('a', 222)
 	map.set('b', 333)
