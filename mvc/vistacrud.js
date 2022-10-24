@@ -1,6 +1,21 @@
+/**
+	@file Contiene la vista del CRUD de la aplicación
+	@author Miguel Jaque <mjaque@fundacionloyola.es>
+	@license GPL-3.0-or-later
+**/
+
 import {Vista} from './vista.js'
 
+/**
+	Vista del CRUD
+	Contiene el formulario de inserción y la tabla de listado.
+**/
 export class VistaCRUD extends Vista{
+	/**
+		Constructor de la clase
+		@param div {HTMLDivElement} Div principal de la vista.
+		@param controlador {Controlador} Controlador de la vista.
+	**/
 	constructor(div, controlador){
 		super(div)
 		this.controlador = controlador
@@ -17,6 +32,9 @@ export class VistaCRUD extends Vista{
 		//Asigno Eventos
 		this.btnAceptar.onclick = this.aceptar.bind(this)
 	}
+	/**
+		Atención al click sobre el botón Aceptar de la vista.
+	**/
 	aceptar(){
 		//Validar los campos
 		
