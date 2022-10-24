@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang=es>
+<head>
+	<meta charset=utf-8 />
+	<meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta name=author content='mjaque@fundacionloyola.es' />
+	<title>MVC</title>
+	<link rel=stylesheet href=css/estilos.css />
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>Inicio</li>
+			<li>CRUD</li>
+			<li>Juego</li>
+		</ul>
+	</nav>
+	<div id=divInicio>
+		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit eros, molestie sed feugiat a, dignissim a diam. Maecenas tellus tortor, convallis quis nibh sit amet, fermentum ultrices diam. Nam consequat erat sed justo facilisis mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras tincidunt porttitor orci non auctor. Maecenas vel augue eu tellus euismod fringilla. Duis bibendum neque et felis scelerisque ullamcorper. Maecenas nec lobortis diam, at commodo lorem. Vivamus et velit ornare, fermentum est a, dictum nisl. Nam id mi et elit lacinia maximus id ac dui. Fusce a ex a dolor accumsan fringilla id finibus velit. Aliquam erat volutpat.</p>
+
+		<p><img src=img/orni.jpg />Maecenas in dapibus libero, eget rhoncus ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur finibus varius molestie. Pellentesque ullamcorper lacus ac odio pulvinar, sed lacinia justo rutrum. Nunc scelerisque lobortis mauris, ac dignissim elit feugiat vel. Cras convallis est ut mollis suscipit. In libero eros, consectetur vehicula ornare at, consequat at risus. Vestibulum fringilla nulla id sollicitudin vulputate.</p>
+	</div>
+	<div id=divCRUD>
+		<h1>CRUD</h1>
+		<label>Nombre:
+			<input type=text />
+		</label><br />
+		<label>Email:
+			<input type=email />
+		</label><br />
+		<div>
+			<button>Cancelar</button>
+			<button>Aceptar</button>
+		</div>
+		<hr />
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Email</th>
+					<th>Ops</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Bob Esponja</td>
+					<td>bobe@gmail.com</td>
+					<td>🗑 ✏</td>
+				</tr>
+				<tr>
+					<td>Calamardo</td>
+					<td>calam@gmail.com</td>
+					<td>🗑 ✏</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id=divJuego>
+		<h1>Frontón</h1>
+	</div>
+	<script type=module src=app.js></script>
+</body>
+</html>
