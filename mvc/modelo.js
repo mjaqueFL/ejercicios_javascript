@@ -13,20 +13,21 @@ export class Modelo{
 		Constructor de la clase
 	**/
 	constructor(){
-		this.lista = []
+		this.lista = [] //Array de datos
+		this.callbacks = [] //Array de callbacks para implementar el observador
 	}
 	/**
 	 * Registra un objeto para informarle de los cambios en el Modelo
 	 * @param {Function} Función de callback que será llamada cuando cambien los datos
 	 **/
 	registrar(callback){
-        this.lista.push(callback)
+        this.callbacks.push(callback)
 	}
 	/**
 	 * Ejecuta todos los callback registrados.
 	 **/
 	 avisar(){
-	     for(let callback of this.lista)
+	     for(let callback of this.callbacks)
 	        callback()
 	 }
 	/**
