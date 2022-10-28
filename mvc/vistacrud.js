@@ -21,7 +21,8 @@ export class VistaCRUD extends Vista{
 		this.controlador = controlador
 
 		//Hacemos que la VistaCRUD "observe" al Modelo
-		this.controlador.getModelo().registrar(this)
+		this.modelo = this.controlador.getModelo()
+		this.modelo.registrar(this.actualizar.bind(this))
 
 		//Cojo referencias a los elementos del interfaz
 		this.iNombre = this.div.getElementsByTagName('input')[0]
@@ -40,5 +41,12 @@ export class VistaCRUD extends Vista{
 		
 		//Llamar al Controlador
 		this.controlador.aceptarCRUD(this.iNombre.value, this.iEmail.value)
+	}
+	/**
+	 * Recibe el aviso del modelo cuando ha sido actualizado.
+	 * Actualiza los datos de la vista.
+	 **/
+	actualizar(){
+	    console.log(this.modelo.getDatos())
 	}
 }
