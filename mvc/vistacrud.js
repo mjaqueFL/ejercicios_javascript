@@ -29,6 +29,8 @@ export class VistaCRUD extends Vista{
 		this.iEmail = this.div.getElementsByTagName('input')[1]
 		this.btnCancelar = this.div.getElementsByTagName('button')[0]
 		this.btnAceptar = this.div.getElementsByTagName('button')[1]
+		
+		this.tabla = this.div.getElementsByTagName('tbody')[0]
 
 		//Asigno Eventos
 		this.btnAceptar.onclick = this.aceptar.bind(this)
@@ -48,5 +50,26 @@ export class VistaCRUD extends Vista{
 	 **/
 	actualizar(){
 	    console.log(this.modelo.getDatos())
+	    this.borrarTabla()
+	    for(let dato in this.modelo.getDatos()){
+	        let tr = document.createElement('tr')
+	        this.tabla.appendChild(tr)
+	        let td1 = document.createElement('td')
+	        tr.appendChild(td1)
+	        td1.textContent = dato.nombre
+	        let td2 = document.createElement('td')
+	        tr.appendChild(td2)
+	        td2.textContent = dato.email
+	        let td3 = document.createElement('td')
+	        tr.appendChild(td3)
+	        td1.textContent = 'iconos de operaciones'
+	    }
 	}
+	/**
+	 * Borra las filas de la tabla
+	 */
+	 borrarTabla(){
+	     while (this.tabla.firstElementChild)
+	        this.tabla.firstElementChild.remove()
+	 }
 }
