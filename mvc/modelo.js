@@ -39,4 +39,13 @@ export class Modelo{
 		this.lista.push({'nombre': nombre, 'email': email})
 		this.avisar()
 	}
+	/**
+	 * Devuelve los datos del modelo.
+	 * En este modelo tan simple, es fácil. En proyectos más complejos, será más elaborado
+	 * #return {Array} Datos del modelo
+	 **/
+	 getDatos(){
+	     return this.lista
+	 }
+	 }
 }
