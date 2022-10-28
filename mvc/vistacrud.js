@@ -21,7 +21,7 @@ export class VistaCRUD extends Vista{
 		this.controlador = controlador
 
 		//Hacemos que la VistaCRUD "observe" al Modelo
-		this.controlador.getModelo().registrar(this)
+		//this.controlador.getModelo().registrar(this)
 
 		//Cojo referencias a los elementos del interfaz
 		this.iNombre = this.div.getElementsByTagName('input')[0]
