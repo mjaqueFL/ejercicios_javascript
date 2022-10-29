@@ -37,14 +37,36 @@ class Controlador{
 		this.vistaCRUD = new VistaCRUD(this.divCRUD, this)
 		this.vistaJuego = new VistaJuego(this.divJuego, this)
 
-		//this.vistaInicio.mostrar(true)
+		this.vistaInicio.mostrar(true)
+	}
+	/**
+	 * Oculta todas las vistas.
+	 */
+	 ocultarVistas(){
+	     this.vistaInicio.mostrar(false)
+	     this.vistaCRUD.mostrar(false)
+	     this.vistaJuego.mostrar(false)
+	 }
+	/**
+		Atención a la pulsación del enlace al Inicio en el menú de navegación.
+	**/
+	pulsarNavCRUD(){
+		this.ocultarVistas()
+		this.vistaInicio.mostrar(true)
 	}
 	/**
 		Atención a la pulsación del enlace al CRUD en el menú de navegación.
 	**/
 	pulsarNavCRUD(){
-		this.vistaInicio.mostrar(false)
+		this.ocultarVistas()
 		this.vistaCRUD.mostrar(true)
+	}
+	/**
+		Atención a la pulsación del enlace al Juego en el menú de navegación.
+	**/
+	pulsarNavCRUD(){
+		this.ocultarVistas()
+		this.vistaJuego.mostrar(true)
 	}
 	/**
 		Atención al click en el botón Aceptar del CRUD.
