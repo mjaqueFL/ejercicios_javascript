@@ -18,12 +18,26 @@ export class VistaNav{
 		this.nav = nav
 		this.liCRUD = this.nav.getElementsByTagName('li')[1]
 
+		this.liInicio.onclick = this.pulsarInicio.bind(this)
 		this.liCRUD.onclick = this.pulsarCRUD.bind(this)
+		this.liJuego.onclick = this.pulsarJuego.bind(this)
+	}
+	/**
+		Atención a la pulsación sobre el enlace de Inicio
+	**/
+	pulsarCRUD(){
+		this.controlador.pulsarNavInicio()
 	}
 	/**
 		Atención a la pulsación sobre el enlace de CRUD
 	**/
 	pulsarCRUD(){
 		this.controlador.pulsarNavCRUD()
+	}
+	/**
+		Atención a la pulsación sobre el enlace de Juego
+	**/
+	pulsarCRUD(){
+		this.controlador.pulsarNavJuego()
 	}
 }
