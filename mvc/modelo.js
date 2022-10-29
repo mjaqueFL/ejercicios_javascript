@@ -47,5 +47,4 @@ export class Modelo{
 	 getDatos(){
 	     return this.lista
 	 }
-	 }
 }
