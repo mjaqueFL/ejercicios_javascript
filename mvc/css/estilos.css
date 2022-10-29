@@ -1,9 +1,6 @@
 body > div {
 	display: none;
 }
-#divJuego{
-	display:block;
-}
 #divInicio img{
 	width: 4rem;
 }
