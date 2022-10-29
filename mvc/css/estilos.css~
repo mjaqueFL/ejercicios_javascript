@@ -1,9 +1,0 @@
-body > div {
-	display: none;
-}
-#divInicio img{
-	width: 4rem;
-}
-nav li{
-	cursor: pointer;
-}
