@@ -64,7 +64,7 @@ class Controlador{
 	/**
 		Atención a la pulsación del enlace al Juego en el menú de navegación.
 	**/
-	pulsarNavCRUD(){
+	pulsarNavJuego(){
 		this.ocultarVistas()
 		this.vistaJuego.mostrar(true)
 	}
