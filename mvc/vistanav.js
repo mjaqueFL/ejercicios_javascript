@@ -25,7 +25,7 @@ export class VistaNav{
 	/**
 		Atención a la pulsación sobre el enlace de Inicio
 	**/
-	pulsarCRUD(){
+	pulsarInicio(){
 		this.controlador.pulsarNavInicio()
 	}
 	/**
@@ -37,7 +37,7 @@ export class VistaNav{
 	/**
 		Atención a la pulsación sobre el enlace de Juego
 	**/
-	pulsarCRUD(){
+	pulsarJuego(){
 		this.controlador.pulsarNavJuego()
 	}
 }
