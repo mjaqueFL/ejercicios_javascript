@@ -51,7 +51,7 @@ export class VistaCRUD extends Vista{
 	actualizar(){
 	    console.log(this.modelo.getDatos())
 	    this.borrarTabla()
-	    for(let dato in this.modelo.getDatos()){
+	    for(let dato of this.modelo.getDatos()){
 	        let tr = document.createElement('tr')
 	        this.tabla.appendChild(tr)
 	        let td1 = document.createElement('td')
