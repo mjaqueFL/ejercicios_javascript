@@ -62,7 +62,7 @@ export class VistaCRUD extends Vista{
 	        td2.textContent = dato.email
 	        let td3 = document.createElement('td')
 	        tr.appendChild(td3)
-	        td1.textContent = 'iconos de operaciones'
+	        td3.textContent = 'iconos de operaciones'
 	    }
 	}
 	/**
