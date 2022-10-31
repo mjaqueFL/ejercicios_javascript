@@ -16,7 +16,9 @@ export class VistaNav{
 	constructor(controlador, nav){
 		this.controlador = controlador
 		this.nav = nav
-		this.liCRUD = this.nav.getElementsByTagName('li')[1]
+		this.liInicio = this.nav.getElementsByTagName('li')[0]
+        this.liCRUD = this.nav.getElementsByTagName('li')[1]
+        this.liJuego = this.nav.getElementsByTagName('li')[2]
 
 		this.liInicio.onclick = this.pulsarInicio.bind(this)
 		this.liCRUD.onclick = this.pulsarCRUD.bind(this)
