@@ -62,16 +62,14 @@ export class VistaCRUD extends Vista{
 	        td2.textContent = dato.email
 	        let td3 = document.createElement('td')
 	        tr.appendChild(td3)
-	        /*
-            let spanEliminar = document,createElement('span')
+            let spanEliminar = document.createElement('span')
             td3.appendChild(spanEliminar)
             spanEliminar.classList.add('icono')
             spanEliminar.textContent = '🗑'
-            let spanEditar = document,createElement('span')
+            let spanEditar = document.createElement('span')
             td3.appendChild(spanEditar)
             spanEditar.classList.add('icono')
             spanEditar.textContent = '✏<'
-            */
         }
 	}
 	/**
