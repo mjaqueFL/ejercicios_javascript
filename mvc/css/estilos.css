@@ -7,3 +7,6 @@ body > div {
 nav li{
 	cursor: pointer;
 }
+.icono{
+    cursor: pointer;
+}
