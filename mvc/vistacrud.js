@@ -62,8 +62,13 @@ export class VistaCRUD extends Vista{
 	        td2.textContent = dato.email
 	        let td3 = document.createElement('td')
 	        tr.appendChild(td3)
-	        td3.textContent = 'iconos de operaciones'
-	    }
+            let spanEliminar = document,createElement('span')
+            td3.appendChild(spanEliminar)
+            spanEliminar.textContent = '🗑'
+            let spanEditar = document,createElement('span')
+            td3.appendChild(spanEditar)
+            spanEditar.textContent = '✏<'
+        }
 	}
 	/**
 	 * Borra las filas de la tabla
