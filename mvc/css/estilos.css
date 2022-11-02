@@ -7,6 +7,12 @@ body > div {
 nav li{
 	cursor: pointer;
 }
+table{
+	border-collapse: collapse;
+}
+td {
+	border: 1px solid black;
+}
 .icono{
     cursor: pointer;
 }

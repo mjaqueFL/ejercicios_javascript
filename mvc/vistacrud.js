@@ -49,7 +49,6 @@ export class VistaCRUD extends Vista{
 	 * Actualiza los datos de la vista.
 	 **/
 	actualizar(){
-	    console.log(this.modelo.getDatos())
 	    this.borrarTabla()
 	    for(let dato of this.modelo.getDatos()){
 	        let tr = document.createElement('tr')
@@ -66,10 +65,12 @@ export class VistaCRUD extends Vista{
             td3.appendChild(spanEliminar)
             spanEliminar.classList.add('icono')
             spanEliminar.textContent = '🗑'
+			spanEliminar.onclick = this.eliminar.bind(this, dato)
             let spanEditar = document.createElement('span')
             td3.appendChild(spanEditar)
             spanEditar.classList.add('icono')
-            spanEditar.textContent = '✏<'
+            spanEditar.textContent = '✏'
+			spanEditar.onclick = this.editar.bind(this, dato)
         }
 	}
 	/**
@@ -79,4 +80,19 @@ export class VistaCRUD extends Vista{
 	     while (this.tabla.firstElementChild)
 	        this.tabla.firstElementChild.remove()
 	 }
+	/**
+		Atención al evento eliminar de una fila.
+		@param dato {Object} Dato contenido en la fila
+	**/
+	eliminar(dato){
+		console.log('Eliminando... ', dato)
+		//Llamada al controlador...
+	}
+	/**
+		Atención al evento editar de una fila.
+		@param dato {Object} Dato contenido en la fila
+	**/
+	editar(dato){
+		console.log('Editando... ', dato)
+	}
 }
