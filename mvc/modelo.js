@@ -21,7 +21,7 @@ export class Modelo{
 	 * @param {Function} Función de callback que será llamada cuando cambien los datos
 	 **/
 	registrar(callback){
-        this.callbacks.push(callback)
+        	this.callbacks.push(callback)
 	}
 	/**
 	 * Ejecuta todos los callback registrados.
@@ -37,6 +37,16 @@ export class Modelo{
 	**/
 	insertar(nombre, email){
 		this.lista.push({'nombre': nombre, 'email': email})
+		this.avisar()
+	}
+	/**
+		Elimina un registro.
+		@param dato {Object} Dato a eliminar
+	**/
+	borrar(dato){
+		for(let i=0; i<= this.lista.length; i++)
+			if (dato == this.lista[i]) 
+				this.lista.splice(i,1)
 		this.avisar()
 	}
 	/**

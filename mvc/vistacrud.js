@@ -61,17 +61,17 @@ export class VistaCRUD extends Vista{
 	        td2.textContent = dato.email
 	        let td3 = document.createElement('td')
 	        tr.appendChild(td3)
-            let spanEliminar = document.createElement('span')
-            td3.appendChild(spanEliminar)
-            spanEliminar.classList.add('icono')
-            spanEliminar.textContent = '🗑'
-			spanEliminar.onclick = this.eliminar.bind(this, dato)
-            let spanEditar = document.createElement('span')
-            td3.appendChild(spanEditar)
-            spanEditar.classList.add('icono')
-            spanEditar.textContent = '✏'
-			spanEditar.onclick = this.editar.bind(this, dato)
-        }
+            	let spanEliminar = document.createElement('span')
+            	td3.appendChild(spanEliminar)
+            	spanEliminar.classList.add('icono')
+            	spanEliminar.textContent = '🗑'
+		spanEliminar.onclick = this.eliminar.bind(this, dato)
+            	let spanEditar = document.createElement('span')
+            	td3.appendChild(spanEditar)
+            	spanEditar.classList.add('icono')
+            	spanEditar.textContent = '✏'
+		spanEditar.onclick = this.editar.bind(this, dato)
+       		}
 	}
 	/**
 	 * Borra las filas de la tabla
@@ -85,8 +85,8 @@ export class VistaCRUD extends Vista{
 		@param dato {Object} Dato contenido en la fila
 	**/
 	eliminar(dato){
-		console.log('Eliminando... ', dato)
-		//Llamada al controlador...
+		//Llamada al controlador
+		this.controlador.eliminarCRUD(dato)
 	}
 	/**
 		Atención al evento editar de una fila.

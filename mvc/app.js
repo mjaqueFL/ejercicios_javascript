@@ -78,6 +78,14 @@ class Controlador{
 		this.modelo.insertar(nombre, email)
 	}
 	/**
+		Atención al click en el icono eliminar del CRUD.
+		Elimina el elemento en el modelo.
+		@param dato {Object} Dato a eliminar
+	**/
+	eliminarCRUD(dato){
+		this.modelo.borrar(dato)
+	}
+	/**
 	 * Devuelve el modelo de la aplicación
 	 * @return {Modelo} El modelo de la aplicación
 	 **/
